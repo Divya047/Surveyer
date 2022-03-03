@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('./layout/header.ejs'); %>
+        <title>Update form</title>
+</head>
+
+<body>
+    <div id="alert" style="display: none">
+        <div id="alerted" class="alert alert-success alert-dismissible fade show" role="alert">
+            Your form has been Updated!
+            <button type="button" id="btn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    <%- include('./layout/navbar.ejs'); %>
+        <div style="border: 2px solid black"
+            class=" container w-50 p-3 position-absolute top-50 start-50 translate-middle">
+            <div class="mb-3 w-50">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" value="<%=name%>" id="name">
+                <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please enter a valid
+                    name</small>
+            </div>
+            <div class="mb-3 w-50">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" value="<%=email%>" name="email">
+                <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please enter a valid email
+                    address</small>
+            </div>
+            <div class="mb-3 w-25">
+                <label for="exampleFormControlInput1" class="form-label">Age</label>
+                <input type="text" class="form-control" name="age" value="<%=age%>" id="age">
+                <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please enter a valid
+                    age</small>
+            </div>
+            <label for="exampleFormControlInput1" class="form-label">Who would win?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="options" id="inlineRadio1" value="Wolverine">
+                <label class="form-check-label" for="inlineRadio1">Wolverine</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="options" id="inlineRadio2" value="Deadpool">
+                <label id="dead" class="form-check-label" for="inlineRadio2">Deadpool</label>
+                <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please choose anyone</small>
+            </div>
+
+            <button id='button' style="border: 1px solid black;" class=" my-2 btn btn-light">Submit</button>
+        </div>
+</body>
+<script src="/Javascript/updateinfo.js"></script>
+
+</html>

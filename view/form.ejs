@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <%- include('./layout/header.ejs'); %>
+        <title>My Form</title>
+</head>
+
+<body>
+    <%- include('./layout/navbar.ejs'); %>
+        <form action="/" method="post" style="border: 2px solid black" onsubmit="submitted()"
+            class=" container w-50 p-3 position-absolute top-50 start-50 translate-middle">
+            <div class="mb-3 w-50">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="name">
+                <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please enter a valid
+                    name</small>
+            </div>
+            <div class="mb-3 w-50">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email">
+                <%=email%>
+                    <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please enter a valid
+                        email
+                        address</small>
+            </div>
+            <div class="mb-3 w-25">
+                <label for="exampleFormControlInput1" class="form-label">Age</label>
+                <input type="text" class="form-control" name="age" id="age">
+                <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please enter a valid
+                    age</small>
+            </div>
+            <label for="exampleFormControlInput1" class="form-label">Who would win?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="options" id="inlineRadio1" value="ironman">
+                <label class="form-check-label" for="inlineRadio1">ironman</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="options" id="inlineRadio2" value="thor">
+                <label id="dead" class="form-check-label" for="inlineRadio2">Hawkeye</label>
+                <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please choose anyone</small>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="options" id="inlineRadio2" value="thor">
+                <label id="dead" class="form-check-label" for="inlineRadio2">thor</label>
+                <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please choose anyone</small>
+            </div>
+
+            <input type='submit' value="Submit" id='button' style="border: 1px solid black;"
+                class=" my-2 btn btn-light">
+        </form>
+</body>
+<script src="/Javascript/form.js"></script>
+
+</html>

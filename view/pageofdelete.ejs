@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./layout/header.ejs'); %>
+        <title>Delete your information</title>
+</head>
+
+<body>
+    <div id="alert" style="display: none">
+        <div id="alerted" class="alert alert-success alert-dismissible fade show" role="alert">
+            Your data has been deleted!
+            <button type="button" id="btn" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    <%- include('./layout/navbar.ejs'); %>
+        <form action="./delete" method="post" onsubmit="alert('Data has been deleted')"
+            class="container w-50 p-3 position-absolute top-50 start-50 translate-middle">
+            <div class="mb-3 w-50">
+                <label for="exampleFormControlInput1" class="form-label">
+                    <h6>Enter your Email Address</h6>
+                </label>
+                <input type="email" class="form-control" id="email" name="email">
+                <small id="passwordHelpBlock" class="form-text text-muted invalid-feedback">Please enter a valid email
+                    address</small>
+            </div>
+            <input type='submit' value="Submit" id='button' style="border: 1px solid black;"
+                class=" my-2 btn btn-light">
+        </form>
+</body>
+
+</html>

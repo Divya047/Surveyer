@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./layout/header.ejs'); %>
+        <title>Update your information</title>
+</head>
+
+<body>
+    <%- include('./layout/navbar.ejs'); %>
+        <form action="./update" method="post" 
+            class="container w-50 p-3 position-absolute top-50 start-50 translate-middle">
+            <div class="mb-3 w-50">
+                <label for="exampleFormControlInput1" class="form-label">
+                    <h6>Enter your Email Address</h6>
+                </label>
+                <input type="email" class="form-control" id="email" name="email">
+                <%= user%>
+            </div>
+            <input type='submit' value="Submit" id='button' style="border: 1px solid black;"
+                class=" my-2 btn btn-light">
+        </form>
+</body>
+
+</html>
